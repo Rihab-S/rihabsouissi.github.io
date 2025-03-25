@@ -70,7 +70,7 @@ body {
 /* Right Side: Projects, Experience, About */
 .right-side {
     width: 70%;
-    background-color: #ffffff;
+    background-color: #5F9EA0;
     padding: 40px;
 }
 
@@ -96,7 +96,7 @@ h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #008B8B;
     color: white;
     text-decoration: none;
     border-radius: 5px;
