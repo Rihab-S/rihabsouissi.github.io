@@ -29,7 +29,7 @@ body {
 /* Experience Post Styling */
 .experience-post {
     background: rgba(10, 25, 65, 0.3); /* Dark blue with opacity */
-    color: white;
+    color: black;  /* Text changed to black */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -42,12 +42,12 @@ body {
 .experience-post h2 {
     font-size: 22px;
     margin-bottom: 5px;
-    color: #fff;
+    color: black; /* Title changed to black */
 }
 
 .experience-post .date {
     font-size: 14px;
-    color: #ddd;
+    color: black; /* Date changed to black */
     font-style: italic;
     display: block;
     margin-bottom: 10px;
@@ -57,6 +57,7 @@ body {
 .experience-post p {
     font-size: 16px;
     line-height: 1.5;
+    color: black; /* Description changed to black */
 }
 
 /* Footer Styling */
