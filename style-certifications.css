@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #000;
+    text-align: center; /* Centers text globally */
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 0 auto; /* Center the main content container */
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #a7c7e7; /* Pastel Blue Background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+    display: flex;
+    justify-content: space-around; /* Spreads sections evenly */
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+
+/* Individual Certification Categories */
+.certification-category {
+    width: 30%; /* Adjusts width for three columns */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certification-category h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.certification-category p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
