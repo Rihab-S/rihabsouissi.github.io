@@ -5,84 +5,135 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #000;
+    text-align: center; /* Centers text globally */
 }
 
-.container {
+/* Main Container */
+.main-container {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the main content container */
     padding: 20px;
 }
 
-/* Header with Profile Image and Navigation */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Top Section: Profile and Contacts */
+.top-section {
     background-color: #a7c7e7; /* Pastel Blue Background */
-    padding: 20px;
+    padding: 40px;
+    border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header .profile-pic {
-    width: 80px;
-    height: 80px;
+.profile-pic {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 2px solid grey;
+    margin-bottom: 20px; /* Space between image and text */
 }
 
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    margin: 10px 0;
+    display: block; /* Makes links stack vertically */
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* About Section */
+#about {
+    padding: 40px 0;
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+}
+
+/* Navigation Bar */
 .nav-bar {
-    display: flex;
-    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 0 15px;
 }
 
 .nav-bar a {
     text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    padding: 10px 15px;
-    transition: 0.3s ease-in-out;
+    color: white;
+    font-size: 18px;
 }
 
-.nav-bar a:hover {
-    text-decoration: underline;
+/* Content Sections */
+.content-section {
+    padding: 40px 0;
 }
 
-/* Main Content Layout */
-.main-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 40px;
+.content-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Left Side: Social Profiles */
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.content-section p {
+    font-size: 18px;
 }
 
-.social-links a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Project Section */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project a {
     text-decoration: none;
-    color: #000;
-    font-size: 14px;
+    color: #007bff;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.social-links img {
-    width: 16px;
-    height: 16px;
-}
-
-/* Right Side: Description */
-.about-section {
-    flex: 1;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.project a:hover {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Footer */
@@ -91,5 +142,5 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
