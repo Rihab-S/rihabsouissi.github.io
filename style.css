@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #000;
+    text-align: center;
 }
 
 .container {
@@ -13,100 +14,58 @@ body {
     padding: 20px;
 }
 
-/* Main Container (2 Sections) */
-.main-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Left Side: Profile and Social Navigation */
-.left-side {
-    width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+/* Profile Section */
+.profile-section {
     text-align: center;
+    padding: 20px;
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 4px solid grey;
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-.left-side h1 {
+.profile-section h1 {
     font-size: 24px;
-    color: #000;
     margin: 10px 0;
-}
-
-.left-side p {
-    font-size: 16px;
-    margin-bottom: 20px;
     color: #000;
 }
 
-/* Social Media Icons Navigation */
-.social-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+.profile-section p {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Social Media Links */
+.social-links {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    padding: 20px 0;
 }
 
-.social-nav a img {
-    width: 30px;
-    height: 30px;
-    transition: 0.3s ease-in-out;
-}
-
-.social-nav a img:hover {
-    opacity: 0.7;
-}
-
-/* Right Side: Projects, Experience, About */
-.right-side {
-    width: 70%;
-    background-color: #ffffff;
-    padding: 40px;
-}
-
-/* Projects, Experience, About Sections */
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.project {
-    background: white;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #000;
-    color: white;
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
-    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
 }
 
-.project .btn:hover {
-    background-color: #333;
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+/* About Me Section */
+.about-section {
+    padding: 20px;
 }
 
 /* Navigation Bar */
