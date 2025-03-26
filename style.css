@@ -27,7 +27,6 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 2px solid transparent; /* Makes border transparent */
     margin-bottom: 20px;
     background: none; /* Ensures no background color */
 }
