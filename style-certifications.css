@@ -5,19 +5,19 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #000;
-    text-align: center; /* Centers text globally */
+    text-align: center;
 }
 
 /* Main Container */
 .container {
     width: 80%;
-    margin: 0 auto; /* Center the main content container */
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Header */
 .header {
-    background-color: FFC0CB; /* Pastel Blue Background */
+    background-color: #a7c7e7;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,30 +31,27 @@ body {
 /* Certifications Grid */
 .certifications-grid {
     display: flex;
-    justify-content: space-around; /* Spreads sections evenly */
+    justify-content: space-between; /* Ensures equal spacing */
     align-items: flex-start;
     gap: 20px;
-    flex-wrap: wrap; /* Ensures responsiveness */
     margin-top: 20px;
 }
 
 /* Individual Certification Categories */
 .certification-category {
-    width: 30%; /* Adjusts width for three columns */
+    flex: 1; /* Makes each section equal width */
     padding: 20px;
-    background: white;
+    background: rgba(0, 0, 139, 0.3); /* Dark blue with opacity */
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: white; /* White text for better readability */
 }
 
-.certification-category h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.certification-category p {
-    font-size: 14px;
+/* Ensures all columns are equal height */
+.certification-category h2,
+.certification-category p,
+.certification-category a {
     margin-bottom: 15px;
 }
 
