@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #000;
-    text-align: center;
 }
 
 .container {
@@ -14,39 +13,53 @@ body {
     padding: 20px;
 }
 
-/* Profile Section */
-.profile-section {
-    text-align: center;
+/* Header with Profile Image and Navigation */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
     padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
+.header .profile-pic {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 4px solid grey;
-    display: block;
-    margin: 0 auto 20px auto;
+    border: 2px solid grey;
 }
 
-.profile-section h1 {
-    font-size: 24px;
-    margin: 10px 0;
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
     color: #000;
-}
-
-.profile-section p {
     font-size: 16px;
-    color: #000;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
 }
 
-/* Social Media Links */
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Left Side: Social Profiles */
 .social-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
-    padding: 20px 0;
 }
 
 .social-links a {
@@ -59,47 +72,17 @@ body {
 }
 
 .social-links img {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
 }
 
-/* About Me Section */
+/* Right Side: Description */
 .about-section {
+    flex: 1;
     padding: 20px;
-}
-
-/* Navigation Bar */
-.nav-bar {
-    background-color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+    background: white;
+    border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.nav-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-bar ul li {
-    display: inline;
-}
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    padding: 10px 15px;
-    transition: 0.3s ease-in-out;
-}
-
-.nav-bar ul li a:hover {
-    text-decoration: underline;
 }
 
 /* Footer */
