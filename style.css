@@ -43,21 +43,40 @@ p {
 
 .social-links {
     margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centers the links */
+    align-items: center;
+    gap: 10px; /* Adjusts space between links */
 }
 
 .social-links a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    margin: 10px 0;
-    display: block; /* Makes links stack vertically */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* Adjusts icon size */
 .social-links img {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
 }
+
+/* Adds a vertical bar "|" as a separator */
+.social-links a::after {
+    content: " | ";
+    color: #000; /* Color of the separator */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Removes the last separator */
+.social-links a:last-child::after {
+    content: "";
+}
+
 
 /* About Section */
 #about {
