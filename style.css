@@ -27,9 +27,11 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 2px solid grey;
-    margin-bottom: 20px; /* Space between image and text */
+    border: 2px solid transparent; /* Makes border transparent */
+    margin-bottom: 20px;
+    background: none; /* Ensures no background color */
 }
+
 
 h1 {
     font-size: 24px;
