@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #333;
+    color: #000;
 }
 
 .container {
@@ -26,6 +26,7 @@ body {
     padding: 20px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    text-align: center;
 }
 
 .profile-pic {
@@ -38,20 +39,22 @@ body {
 
 .left-side h1 {
     font-size: 24px;
-    color: #007bff;
+    color: #000;
     margin: 10px 0;
 }
 
 .left-side p {
     font-size: 16px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 /* Social Media Icons Navigation */
 .social-nav {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -80,7 +83,7 @@ section {
 }
 
 h2 {
-    color: #007bff;
+    color: #000;
     margin-bottom: 20px;
 }
 
@@ -96,19 +99,53 @@ h2 {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #000;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .project .btn:hover {
-    background-color: #0056b3;
+    background-color: #333;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-bar ul li {
+    display: inline;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: white;
     text-align: center;
     padding: 10px;
