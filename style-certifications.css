@@ -17,11 +17,11 @@ body {
     font-size: 24px;
 }
 
+/* Certificates List Link Styling */
 .certificates-list li a.btn {
-  color: black;           /* Sets the link text color to black */
-  text-decoration: none;  /* Removes the underline from the link */
+    color: black;           /* Sets the link text color to black */
+    text-decoration: none;  /* Removes the underline from the link */
 }
-
 
 /* Main Container */
 .container {
