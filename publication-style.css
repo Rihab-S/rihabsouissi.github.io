@@ -1,0 +1,70 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #000;
+    text-align: center;
+}
+
+/* Header Styling */
+.header {
+    background-color: rgba(10, 25, 65, 0.8); /* Dark blue with opacity */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Experience Post Styling */
+.experience-post {
+    background: rgba(10, 25, 65, 0.3); /* Dark blue with opacity */
+    color: black;  /* Text changed to black */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+/* Title and Date */
+.experience-post h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: black; /* Title changed to black */
+}
+
+.experience-post .date {
+    font-size: 14px;
+    color: black; /* Date changed to black */
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.experience-post p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: black; /* Description changed to black */
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(10, 25, 65, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
