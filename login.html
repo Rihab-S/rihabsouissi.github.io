@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Indoor Localization Application</title>
+  <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Required</h2>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+    <p id="error-message" style="color: red; display: none;">Invalid credentials. Please try again.</p>
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Dummy username and password (Change this to actual credentials if needed)
+      const correctUsername = "user123";
+      const correctPassword = "pass123";
+
+      // Get user input
+      const enteredUsername = document.getElementById("username").value;
+      const enteredPassword = document.getElementById("password").value;
+
+      // Check credentials
+      if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+        window.location.href = "https://github.com/Rihab-S/Indoor-Localization-application/tree/main"; // Redirect to private repo
