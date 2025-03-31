@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Indoor Localization Application</title>
   <link rel="stylesheet" href="login-style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
-  
+
   <header class="header">
     <h1>Projects</h1>
   </header>
@@ -26,7 +27,7 @@
       
       <button type="submit">Login</button>
     </form>
-    <p id="error-message">Invalid credentials. Please try again.</p>
+    <p id="error-message" style="display:none;">Invalid credentials. Please try again.</p>
   </div>
 
   <footer class="footer">
@@ -40,17 +41,22 @@
     }
 
     document.getElementById("login-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault();
 
-      // Dummy credentials (Change these)
-      const correctUsername = "user123";
-      const correctPassword = "pass123";
+      // Encrypted Credentials (AES Encryption)
+      const encryptedUsername = "U2FsdGVkX1+PeGZ5G5HQ0j7FfgbAqHg6eHk="; // Encrypted "user123"
+      const encryptedPassword = "U2FsdGVkX1/3vJ45mlq=3hgjKKF7Hb8t="; // Encrypted "pass123"
+      const secretKey = "mySecretKey123!"; // Must match encryption key
+
+      function decryptAES(encryptedText) {
+        return CryptoJS.AES.decrypt(encryptedText, secretKey).toString(CryptoJS.enc.Utf8);
+      }
 
       const enteredUsername = document.getElementById("username").value;
       const enteredPassword = document.getElementById("password").value;
 
-      if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
-        window.location.href = "https://github.com/Rihab-S/Indoor-Localization-application/tree/main"; 
+      if (enteredUsername === decryptAES(encryptedUsername) && enteredPassword === decryptAES(encryptedPassword)) {
+        window.location.href = "https://github.com/Rihab-S/Indoor-Localization-application/tree/main";
       } else {
         document.getElementById("error-message").style.display = "block";
       }
