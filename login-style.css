@@ -50,16 +50,18 @@ label {
   font-weight: bold;
   display: block;
   margin-top: 10px;
+  text-align: left;
 }
 
 /* Input Fields */
 input {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 /* Password Container */
@@ -68,7 +70,7 @@ input {
   width: 100%;
 }
 
-/* Show Password Button */
+/* Show Password Button as an Eye Icon */
 .show-password {
   position: absolute;
   right: 10px;
@@ -77,8 +79,13 @@ input {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   color: #007BFF;
+}
+
+/* Eye Icon Styling */
+.show-password i {
+  font-size: 18px;
 }
 
 /* Login Button */
