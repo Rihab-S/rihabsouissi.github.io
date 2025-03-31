@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Indoor Localization Application</title>
   <link rel="stylesheet" href="login-style.css">
-  <!-- FontAwesome for eye icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Include CryptoJS Library for encryption -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0-rc.1/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
-  
   <header class="header">
     <h1>Projects</h1>
   </header>
@@ -25,9 +21,7 @@
       <label for="password">Password:</label>
       <div class="password-container">
         <input type="password" id="password" name="password" required>
-        <button type="button" class="show-password" onclick="togglePassword()">
-          <i class="fas fa-eye"></i>
-        </button>
+        <button type="button" class="show-password" onclick="togglePassword()">👁</button>
       </div>
       
       <button type="submit">Login</button>
@@ -40,48 +34,35 @@
   </footer>
 
   <script>
-    // Encryption key (should be secret and unique)
-    const secretKey = 'mySecretKey123!';
-
-    
-    const encryptedUsername = "U2FsdGVkX1+nDhZb2D6zCv9pzO+3FdWLwWLyA5s7VJg="; 
-    const encryptedPassword = "U2FsdGVkX1+db16QJme2Dhlh+U9MYtXgfJ+c7xwbg6k="; 
-
-    // Function to toggle password visibility
     function togglePassword() {
       var passwordField = document.getElementById("password");
-      var passwordIcon = document.querySelector(".show-password i");
-      // Toggle between password and text type
-      if (passwordField.type === "password") {
-        passwordField.type = "text";
-        passwordIcon.classList.remove("fa-eye");
-        passwordIcon.classList.add("fa-eye-slash");
-      } else {
-        passwordField.type = "password";
-        passwordIcon.classList.remove("fa-eye-slash");
-        passwordIcon.classList.add("fa-eye");
-      }
+      passwordField.type = (passwordField.type === "password") ? "text" : "password";
     }
 
-    // Handle form submission
     document.getElementById("login-form").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent form submission
+
+      // Encrypted Credentials (AES Encryption)
+      const encryptedUsername = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; // Encrypted "RihabSouissi"
+      const encryptedPassword = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; // Encrypted "Loc@lization@pp123"
+      const secretKey = "mySecretKey123!";
+
+      function decrypt(text) {
+        return CryptoJS.AES.decrypt(text, secretKey).toString(CryptoJS.enc.Utf8);
+      }
+
+      const correctUsername = decrypt(encryptedUsername);
+      const correctPassword = decrypt(encryptedPassword);
 
       const enteredUsername = document.getElementById("username").value;
       const enteredPassword = document.getElementById("password").value;
 
-      // Decrypt the stored encrypted credentials
-      const decryptedUsername = CryptoJS.AES.decrypt(encryptedUsername, secretKey).toString(CryptoJS.enc.Utf8);
-      const decryptedPassword = CryptoJS.AES.decrypt(encryptedPassword, secretKey).toString(CryptoJS.enc.Utf8);
-
-      // Compare the entered credentials with the decrypted ones
-      if (enteredUsername === decryptedUsername && enteredPassword === decryptedPassword) {
+      if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
         window.location.href = "https://github.com/Rihab-S/Indoor-Localization-application/tree/main"; 
       } else {
         document.getElementById("error-message").style.display = "block";
       }
     });
   </script>
-
 </body>
 </html>
