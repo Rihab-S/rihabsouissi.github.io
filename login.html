@@ -42,9 +42,9 @@
     document.getElementById("login-form").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent form submission
 
-      // Encrypted Credentials (AES Encryption)
-      const encryptedUsername = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; // Encrypted "RihabSouissi"
-      const encryptedPassword = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; // Encrypted "Loc@lization@pp123"
+      
+      const encryptedUsername = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; 
+      const encryptedPassword = "OJU2cWj7M4s4DBclqXD95rqolp9Dl0YViojzS5PE8Ck="; 
       const secretKey = "mySecretKey123!";
 
       function decrypt(text) {
