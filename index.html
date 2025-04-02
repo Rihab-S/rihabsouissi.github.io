@@ -10,7 +10,17 @@
             let viewCount = localStorage.getItem("profileViews") || 0;
             viewCount++;
             localStorage.setItem("profileViews", viewCount);
-            document.getElementById("view-counter").innerText = "Profile Views: " + viewCount;
+            
+            // Send an email with the view count
+            fetch("https://your-server-endpoint.com/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    to: "souissirihab900@gmail.com",
+                    subject: "New Profile View",
+                    message: `Your profile has been viewed ${viewCount} times.`
+                })
+            });
         });
     </script>
 </head>
@@ -25,7 +35,6 @@
                 <img src="profile.jpg" alt="Rihab Souissi" class="profile-pic">
                 <h1>Hello, I'm Rihab Souissi</h1>
                 <p>Doctor | Machine Learning Researcher | Research & Development</p>
-                <p id="view-counter">Profile Views: 0</p>
                 
                 <!-- Social Media Links -->
                 <div class="social-links">
