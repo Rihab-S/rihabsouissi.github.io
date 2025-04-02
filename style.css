@@ -31,40 +31,39 @@ body {
     background: none; /* Ensures no background color */
 }
 
-h1 {
+/* Animated Title */
+.animated-title {
     font-size: 24px;
     margin: 10px 0;
-    animation: fadeInText 3s ease-in-out infinite;
+    display: inline-block;
+    position: relative;
+    min-height: 30px;
 }
 
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
+.animated-title::after {
+    content: "I'm a Doctor";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    animation: changeText 12s infinite;
+    font-size: 20px;
+    color: #333;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes changeText {
+    0%, 25% { content: "I'm a Doctor"; }
+    25.1%, 50% { content: "I'm a Machine Learning Researcher"; }
+    50.1%, 75% { content: "I'm in Research & Development"; }
+    75.1%, 100% { content: "I'm a Doctor"; }
 }
 
 p {
     font-size: 16px;
     margin: 10px 0;
-    animation: slideInText 3s ease-out forwards;
-    opacity: 0;
-}
-
-@keyframes slideInText {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 /* Social Links */
