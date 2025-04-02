@@ -23,7 +23,6 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -32,17 +31,43 @@ body {
     background: none; /* Ensures no background color */
 }
 
-
 h1 {
     font-size: 24px;
     margin: 10px 0;
+    animation: fadeInText 3s ease-in-out infinite;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 p {
     font-size: 16px;
     margin: 10px 0;
+    animation: slideInText 3s ease-out forwards;
+    opacity: 0;
 }
 
+@keyframes slideInText {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Social Links */
 .social-links {
     margin-top: 20px;
     display: flex;
@@ -78,7 +103,6 @@ p {
 .social-links a:last-child::after {
     content: "";
 }
-
 
 /* About Section */
 #about {
@@ -116,46 +140,6 @@ p {
     color: white;
     font-size: 18px;
 }
-
-/* /* Content Sections */
-/* .content-section {
-    padding: 40px 0;
-}
-
-.content-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.content-section p {
-    font-size: 18px;
-} */
-
-/* Project Section */
-/* .project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.project a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.project a:hover {
-    background-color: #007bff;
-    color: white;
-} */ */
 
 /* Footer */
 footer {
