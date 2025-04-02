@@ -34,6 +34,13 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s;
+    text-align: center;
+}
+
+.skill-box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .skill-box:hover {
