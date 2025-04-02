@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px; /* Fixed height to prevent jumping */
+    height: 50px; /* Prevents jumping effect */
     font-size: 20px;
     font-weight: bold;
     position: relative;
@@ -51,7 +51,8 @@ body {
 .animated-title .flip-text {
     position: absolute;
     opacity: 0;
-    animation: fadeReplace 4s linear infinite;
+    transform: translateX(-100%); /* Starts off-screen */
+    animation: whipReplace 4s ease-in-out infinite;
 }
 
 .animated-title .flip-text:nth-child(1) {
@@ -70,12 +71,14 @@ body {
     animation-delay: 12s;
 }
 
-@keyframes fadeReplace {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
+/* Keyframes for whip-like entrance and exit */
+@keyframes whipReplace {
+    0% { transform: translateX(-100%); opacity: 0; }
+    10% { transform: translateX(0); opacity: 1; } /* Snaps into place */
+    90% { transform: translateX(0); opacity: 1; } /* Holds */
+    100% { transform: translateX(100%); opacity: 0; } /* Whips out */
 }
+
 
 
 /* Social Links */
