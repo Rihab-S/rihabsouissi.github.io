@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (letterIndex === currentPhrase.length) {
                 isDeleting = true;
-                setTimeout(typeEffect, 1500); // Pause before deleting
+                setTimeout(typeEffect, 700); // Pause before deleting
                 return;
             }
         } else {
