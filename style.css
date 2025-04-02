@@ -60,15 +60,15 @@ body {
 }
 
 .animated-title .flip-text:nth-child(2) {
-    animation-delay: 4s;
+    animation-delay: 0s;
 }
 
 .animated-title .flip-text:nth-child(3) {
-    animation-delay: 8s;
+    animation-delay: 0s;
 }
 
 .animated-title .flip-text:nth-child(4) {
-    animation-delay: 12s;
+    animation-delay: 0s;
 }
 
 /* Keyframes for whip-like entrance and exit */
