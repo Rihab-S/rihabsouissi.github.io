@@ -52,7 +52,7 @@ body {
     position: absolute;
     opacity: 0;
     transform: translateX(-100%);
-    animation: whipReplace 4s ease-in-out infinite;
+    animation: whipReplace 10s ease-in-out infinite;
 }
 
 .animated-title .flip-text:nth-child(1) {
