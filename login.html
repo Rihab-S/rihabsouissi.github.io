@@ -3,65 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Indoor Localization Application</title>
-  <link rel="stylesheet" href="login-style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <title>Redirecting...</title>
+  <script>
+    window.location.href = "https://github.com/Rihab-S/Another-Repository";
+  </script>
 </head>
 <body>
-  <header class="header">
-    <h1>Projects</h1>
-  </header>
-
-  <div class="login-container">
-    <h2>Login Required</h2>
-    <form id="login-form">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-
-      <label for="password">Password:</label>
-      <div class="password-container">
-        <input type="password" id="password" name="password" required>
-        <button type="button" class="show-password" onclick="togglePassword()">👁</button>
-      </div>
-      
-      <button type="submit">Login</button>
-    </form>
-    <p id="error-message" style="display:none; color:red;">Invalid credentials. Please try again.</p>
-  </div>
-
-  <footer class="footer">
-    <p>© 2025 Rihab Souissi. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function togglePassword() {
-      var passwordField = document.getElementById("password");
-      passwordField.type = (passwordField.type === "password") ? "text" : "password";
-    }
-
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
-
-      const secretKey = "mySecretKey123!";
-      const encryptedUsername = "U2FsdGVkX18bNwEckq2GoAoeKjK7TZl/7Dq1H9m4WtI="; 
-      const encryptedPassword = "U2FsdGVkX1+trMNwwMptlqHtp2GqJ7xgLh51FFfVP+Q="; 
-
-      function decrypt(text) {
-        return CryptoJS.AES.decrypt(text, secretKey).toString(CryptoJS.enc.Utf8);
-      }
-
-      const correctUsername = decrypt(encryptedUsername);
-      const correctPassword = decrypt(encryptedPassword);
-
-      const enteredUsername = document.getElementById("username").value;
-      const enteredPassword = document.getElementById("password").value;
-
-      if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
-        window.location.href = "https://github.com/Rihab-S/Indoor-Localization-application/tree/main"; 
-      } else {
-        document.getElementById("error-message").style.display = "block";
-      }
-    });
-  </script>
+  <p>If you are not redirected automatically, <a href="https://github.com/Rihab-S/Another-Repository">click here</a>.</p>
 </body>
 </html>
