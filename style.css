@@ -21,60 +21,66 @@ body {
     padding: 60px 20px; /* Increased top and bottom padding */
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
+/* Profile Image */
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 60px; /* Increased space below the picture */
     background: none; /* Ensures no background color */
+    margin-bottom: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
 }
 
 /* Animated Title */
 .animated-title {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 24px;
+    margin-top: 200px; /* Adjusts for the spacing after the profile image */
     display: inline-block;
     position: relative;
     min-height: 40px;
-    overflow: hidden; /* Ensures that text remains in place during transition */
+    overflow: hidden;
 }
 
-.animated-title span {
+.animated-title .flip-text {
     display: inline-block;
-    white-space: nowrap;
     opacity: 0;
-    animation: typing 15s steps(25) 1s 1 normal both, blink 0.75s step-end infinite;
+    animation: flipInX 1s ease-in-out infinite;
 }
 
-.animated-title::before {
-    content: "I'm Rihab Souissi";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    color: #333;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+.animated-title .flip-text:nth-child(1) {
+    animation-delay: 0s;
 }
 
-@keyframes typing {
+.animated-title .flip-text:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.animated-title .flip-text:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.animated-title .flip-text:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes flipInX {
     0% {
-        width: 0;
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateX(-10deg);
         opacity: 1;
     }
     100% {
-        width: 100%;
+        transform: rotateX(0deg);
         opacity: 1;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
     }
 }
 
