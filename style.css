@@ -5,25 +5,25 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     color: #000;
-    text-align: center; /* Centers text globally */
+    text-align: center;
 }
 
 /* Main Container */
 .main-container {
     width: 80%;
-    margin: 0 auto; /* Center the main content container */
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Top Section: Profile and Contacts */
+/* Top Section */
 .top-section {
-    background-color: rgba(255, 228, 225, 0.6); /* Pastel color with 60% opacity */
-    padding: 80px 20px; /* Increased top and bottom padding */
+    background-color: rgba(255, 228, 225, 0.6);
+    padding: 80px 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers everything */
+    align-items: center;
 }
 
 /* Profile Image */
@@ -32,60 +32,33 @@ body {
     height: 150px;
     border-radius: 50%;
     background: none;
-    margin-bottom: 40px; /* Space below the picture */
+    margin-bottom: 20px; /* Space below the picture */
 }
 
 /* Animated Title */
 .animated-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Prevents jumping effect */
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 50px; /* Added space below the animation */
+    height: 30px; /* Prevents layout shift */
+    margin-bottom: 30px; /* Space below the animation */
 }
 
-.animated-title .flip-text {
-    position: absolute;
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: whipReplace 10s ease-in-out infinite;
+/* Cursor effect */
+#animated-text::after {
+    content: "|";
+    animation: blink 0.6s infinite;
 }
 
-.animated-title .flip-text:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.animated-title .flip-text:nth-child(2) {
-    animation-delay: 0s;
-}
-
-.animated-title .flip-text:nth-child(3) {
-    animation-delay: 0s;
-}
-
-.animated-title .flip-text:nth-child(4) {
-    animation-delay: 0s;
-}
-
-/* Keyframes for whip-like entrance and exit */
-@keyframes whipReplace {
-    0% { transform: translateX(-100%); opacity: 0; }
-    10% { transform: translateX(0); opacity: 1; }
-    90% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(100%); opacity: 0; }
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 /* Social Links */
 .social-links {
-    margin-top: 20px; /* Space between animated text and social links */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 15px; /* Adjusts space between links */
+    gap: 15px;
 }
 
 .social-links a {
@@ -95,39 +68,6 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-/* Adjusts icon size */
-.social-links img {
-    width: 20px;
-    height: 20px;
-}
-
-/* Adds a vertical bar "|" as a separator */
-.social-links a::after {
-    content: " | ";
-    color: #000; /* Color of the separator */
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Removes the last separator */
-.social-links a:last-child::after {
-    content: "";
-}
-
-/* About Section */
-#about {
-    padding: 40px 0;
-}
-
-#about h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 18px;
 }
 
 /* Navigation Bar */
