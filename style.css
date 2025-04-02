@@ -41,6 +41,13 @@ body {
     overflow: hidden; /* Ensures that text remains in place during transition */
 }
 
+.animated-title span {
+    display: inline-block;
+    white-space: nowrap;
+    opacity: 0;
+    animation: typing 15s steps(25) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
 .animated-title::before {
     content: "I'm Rihab Souissi";
     position: absolute;
@@ -48,31 +55,27 @@ body {
     top: 0;
     width: 100%;
     text-align: center;
-    animation: changeText 15s infinite;
     font-size: 20px;
     color: #333;
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
 
-@keyframes changeText {
-    0%, 25% {
-        content: "I'm Rihab Souissi";
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 1;
     }
-    25.1%, 50% {
-        content: "I'm a Doctor";
-    }
-    50.1%, 75% {
-        content: "I'm a Machine Learning Researcher";
-    }
-    75.1%, 100% {
-        content: "I'm  a developer";
+    100% {
+        width: 100%;
+        opacity: 1;
     }
 }
 
-p {
-    font-size: 16px;
-    margin: 10px 0;
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 /* Social Links */
