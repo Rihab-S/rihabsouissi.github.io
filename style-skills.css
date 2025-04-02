@@ -1,9 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 h1 {
@@ -13,16 +16,21 @@ h1 {
 
 .skills-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
 }
 
 .skill-box {
     background: white;
     padding: 20px;
-    width: 200px;
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s;
@@ -31,4 +39,3 @@ h1 {
 .skill-box:hover {
     transform: scale(1.05);
 }
-
