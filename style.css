@@ -27,17 +27,17 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 40px; /* Increased space below the picture */
+    margin-bottom: 60px; /* Increased space below the picture */
     background: none; /* Ensures no background color */
 }
 
 /* Animated Title */
 .animated-title {
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0;
     display: inline-block;
     position: relative;
-    min-height: 30px;
+    min-height: 40px;
 }
 
 .animated-title::after {
@@ -47,7 +47,7 @@ body {
     top: 100%;
     width: 100%;
     text-align: center;
-    animation: changeText 12s infinite;
+    animation: changeText 11s infinite;
     font-size: 20px;
     color: #333;
     opacity: 1;
@@ -68,7 +68,7 @@ p {
 
 /* Social Links */
 .social-links {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: center; /* Centers the links */
     align-items: center;
