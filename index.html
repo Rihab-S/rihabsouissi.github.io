@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rihab Souissi - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let viewCount = localStorage.getItem("profileViews") || 0;
+            viewCount++;
+            localStorage.setItem("profileViews", viewCount);
+            document.getElementById("view-counter").innerText = "Profile Views: " + viewCount;
+        });
+    </script>
 </head>
 <body>
 
@@ -17,7 +25,8 @@
                 <img src="profile.jpg" alt="Rihab Souissi" class="profile-pic">
                 <h1>Hello, I'm Rihab Souissi</h1>
                 <p>Doctor | Machine Learning Researcher | Research & Development</p>
-
+                <p id="view-counter">Profile Views: 0</p>
+                
                 <!-- Social Media Links -->
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/rihab-souissi17-05-/" target="_blank">LinkedIn</a>
@@ -46,32 +55,7 @@
                 <li><a href="research-publications.html">Research Publications</a></li>
             </ul>
         </nav>
-
-<!--         <!-- Content Sections -->
-<!--         <section id="projects" class="content-section">
-            <h2>My Projects</h2>
-            <div class="project">
-                <h3>AI- projects</h3>
-                <p>Developed an AI model for predictive analysis, improving accuracy in trend forecasting.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Data Visualization Dashboard</h3>
-                <p>Built an interactive dashboard for real-time data visualization using Python & Dash.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </section>
-
-        <section id="certifications" class="content-section">
-            <h2>Certifications</h2>
-            <p>Details about earned certifications and professional training.</p>
-        </section>
-
-        <section id="experience" class="content-section">
-            <h2>Experience</h2>
-            <p>Details about professional experience, research, and development roles.</p>
-        </section> -->
-<!--     </div> --> 
+    </div>
 
     <!-- Footer -->
     <footer>
