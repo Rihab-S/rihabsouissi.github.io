@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 phraseIndex = (phraseIndex + 1) % phrases.length; // Move to the next phrase
             }
         }
-        setTimeout(typeEffect, isDeleting ? 100 : 150); // Typing speed
+        setTimeout(typeEffect, isDeleting ? 50 : 100); // Typing speed
     }
     
     typeEffect();
