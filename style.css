@@ -38,16 +38,17 @@ body {
     display: inline-block;
     position: relative;
     min-height: 40px;
+    overflow: hidden; /* Ensures that text remains in place during transition */
 }
 
-.animated-title::after {
-    content: "I'm a Doctor";
+.animated-title::before {
+    content: "I'm Rihab Souissi";
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 0;
     width: 100%;
     text-align: center;
-    animation: changeText 11s infinite;
+    animation: changeText 15s infinite;
     font-size: 20px;
     color: #333;
     opacity: 1;
@@ -55,10 +56,18 @@ body {
 }
 
 @keyframes changeText {
-    0%, 25% { content: "I'm a Doctor"; }
-    25.1%, 50% { content: "I'm a Machine Learning Researcher"; }
-    50.1%, 75% { content: "I'm in Research & Development"; }
-    75.1%, 100% { content: "I'm a Doctor"; }
+    0%, 25% {
+        content: "I'm Rihab Souissi";
+    }
+    25.1%, 50% {
+        content: "I'm a Doctor";
+    }
+    50.1%, 75% {
+        content: "I'm a Machine Learning Researcher";
+    }
+    75.1%, 100% {
+        content: "I'm  a developer";
+    }
 }
 
 p {
