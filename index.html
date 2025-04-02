@@ -5,24 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rihab Souissi - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let viewCount = localStorage.getItem("profileViews") || 0;
-            viewCount++;
-            localStorage.setItem("profileViews", viewCount);
-            
-            // Send an email with the view count
-            fetch("https://your-server-endpoint.com/send-email", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    to: "souissirihab900@gmail.com",
-                    subject: "New Profile View",
-                    message: `Your profile has been viewed ${viewCount} times.`
-                })
-            });
-        });
-    </script>
 </head>
 <body>
 
@@ -31,35 +13,27 @@
         
         <!-- Top Section: Profile and Contacts -->
         <section class="top-section">
-            <div class="container">
-                <img src="profile.jpg" alt="Rihab Souissi" class="profile-pic">
-                
-                <!-- Animated Title Section -->
-               <div class="animated-title">
-                    <span class="flip-text">I'm Rihab Souissi</span>
-                    <span class="flip-text">I'm a Doctor</span>
-                    <span class="flip-text">I'm a Machine Learning Researcher</span>
-                    <span class="flip-text">I'm a Software Developer</span>
-                </div>
-
-
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/rihab-souissi17-05-/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Rihab-S" target="_blank">GitHub</a>
-                    <a href="https://scholar.google.com/citations?hl=fr&user=2qZDT9UAAAAJ" target="_blank">Google Scholar</a>
-                    <a href="https://www.researchgate.net/profile/Rihab-Souissi" target="_blank">ResearchGate</a>
-                    <a href="mailto:souissirihab900@gmail.com">Email</a> 
-                </div>
+            <img src="profile.jpg" alt="Rihab Souissi" class="profile-pic">
+            
+            <!-- Animated Title -->
+            <div class="animated-title">
+                <span id="animated-text"></span>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rihab-souissi17-05-/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Rihab-S" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com/citations?hl=fr&user=2qZDT9UAAAAJ" target="_blank">Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Rihab-Souissi" target="_blank">ResearchGate</a>
+                <a href="mailto:souissirihab900@gmail.com">Email</a> 
             </div>
         </section>
 
         <!-- About Me Section -->
         <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Doctor of Information and Communication Science and Technology with recognized expertise in AI and machine learning, having led innovative research projects that improve the accuracy of sensor systems thanks to my skills in Python and C++.</p>
-            </div>
+            <h2>About Me</h2>
+            <p>Doctor of Information and Communication Science and Technology with recognized expertise in AI and machine learning, having led innovative research projects that improve the accuracy of sensor systems thanks to my skills in Python and C++.</p>
         </section>
 
         <!-- Navigation Bar -->
@@ -78,9 +52,9 @@
     <footer>
         <p>© 2025 Rihab Souissi.</p>
     </footer>
+
     <!-- Link to JavaScript file -->
     <script src="script.js"></script>
-
 
 </body>
 </html>
