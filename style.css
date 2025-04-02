@@ -47,10 +47,21 @@ body {
     overflow: hidden;
 }
 
+.animated-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Adjust height to avoid jumping */
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
 .animated-title .flip-text {
-    display: inline-block;
+    position: absolute;
     opacity: 0;
-    animation: flipInX 1s ease-in-out infinite;
+    animation: fadeInOut 4s linear infinite;
 }
 
 .animated-title .flip-text:nth-child(1) {
@@ -69,19 +80,12 @@ body {
     animation-delay: 12s;
 }
 
-@keyframes flipInX {
-    0% {
-        transform: rotateX(90deg);
-        opacity: 0;
-    }
-    50% {
-        transform: rotateX(-10deg);
-        opacity: 1;
-    }
-    100% {
-        transform: rotateX(0deg);
-        opacity: 1;
-    }
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 /* Social Links */
