@@ -71,6 +71,12 @@ body {
 .experience-post:hover {
     transform: scale(1.05);
 }
+/* Logo Icon Styling */
+.experience-post img {
+    width: 30px; /* Smaller icon */
+    height: 30px;
+    margin-bottom: 10px;
+}
 
 /* Footer Styling */
 footer {
