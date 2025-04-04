@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const phrases = [
         "I'm Rihab Souissi",
         "I'm a Doctor",
-        "I'm a Machine Learning Researcher",
-        "I'm a Software Developer"
+        "I'm a Machine Learning Researcher and developer",
+        "I'm a Python Developer",
+        "I'm a C++ Developer",
     ];
     let phraseIndex = 0;
     let letterIndex = 0;
