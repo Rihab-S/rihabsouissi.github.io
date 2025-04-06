@@ -9,6 +9,16 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+.slideshow-container {
+    position: relative;
+    width: 60%; /* Adjust the container width */
+    max-width: 400px; /* Set a maximum width */
+    height: auto;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+    border-radius: 8px;
+}
 
 h1 {
     color: #333;
