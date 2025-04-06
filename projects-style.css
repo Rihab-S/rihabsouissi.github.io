@@ -53,17 +53,23 @@ h1 {
     margin-right: 20px; /* Spacing between the image and text */
 }
 
-/* Image Styling */
 .slideshow-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30%;  /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 0.3s ease;
     border-radius: 8px;
     z-index: 0;
+    transform: scale(0.7); /* Adjust scale factor to make image smaller */
+}
+
+.slideshow-image.active {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);  /* Reset scale when the image is active */
 }
 
 /* Rotate on Hover */
