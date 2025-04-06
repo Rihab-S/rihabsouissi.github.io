@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   slideShows.forEach(container => {
     let index = 0;
-    const images = container.querySelectorAll('.slideshow-image');
+    const images = container.querySelectorAll('.slideshows-image');
 
     // Initially hide all images
     images.forEach(image => {
