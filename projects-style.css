@@ -12,7 +12,7 @@ body {
 h1 {
     color: #333;
     margin-top: 20px;
-    font-size: 24px; /* Smaller font size for heading */
+    font-size: 24px;
 }
 
 .skills-container {
@@ -42,13 +42,13 @@ h1 {
 }
 
 .skill-box img {
-    width: 40px; /* Slightly smaller icon */
+    width: 40px;
     height: 40px;
     margin-bottom: 10px;
 }
 
 .skill-box p {
-    font-size: 12px; /* Smaller font size for the paragraph */
+    font-size: 12px;
     line-height: 1.4;
     color: #555;
 }
@@ -57,49 +57,67 @@ h1 {
     transform: scale(1.05);
 }
 
+/* ==== Slideshow Section ==== */
 .slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 0 auto 20px auto;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0); /* Optional background fade style */
+    border-radius: 8px;
 }
 
 .slideshow-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  border-radius: 8px;
-  z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 8px;
+    z-index: 0;
 }
 
 .slideshow-image.active {
-  opacity: 1;
-  z-index: 1;
+    opacity: 1;
+    z-index: 1;
 }
 
+/* Optional extra animation keyframes if you want to animate something more */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.slideshow-image.active {
+    animation: fadeInSlide 1s ease-in-out;
+}
 
 /* Text content */
 h2 {
-  font-size: 1.2rem;
-  margin-top: 0;
+    font-size: 1.2rem;
+    margin-top: 0;
 }
 
 .date {
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f1f1f1;
-  font-size: 0.9em;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-size: 0.9em;
 }
