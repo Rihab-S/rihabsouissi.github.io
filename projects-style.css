@@ -56,3 +56,17 @@ h1 {
 .skill-box:hover {
     transform: scale(1.05);
 }
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.slideshow-image {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+}
+
