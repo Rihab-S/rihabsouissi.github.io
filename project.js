@@ -5,16 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     const images = container.querySelectorAll('.slideshow-image');
 
-    // Show the first image
-    images.forEach((img, i) => {
-      img.style.display = i === 0 ? 'block' : 'none';
-    });
+    // Make the first image visible
+    images[index].classList.add('active');
 
-    // Rotate images every second
     setInterval(() => {
-      images[index].style.display = 'none';
+      images[index].classList.remove('active');
       index = (index + 1) % images.length;
-      images[index].style.display = 'block';
+      images[index].classList.add('active');
     }, 1000);
   });
 });
