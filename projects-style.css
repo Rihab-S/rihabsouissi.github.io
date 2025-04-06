@@ -19,10 +19,12 @@ h1 {
 /* === Container and Project Box === */
 .skills-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Align items horizontally (text on left, slideshow on right) */
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 .skill-box {
@@ -30,13 +32,13 @@ h1 {
     padding: 20px;
     width: 60%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* Align text and slideshow horizontally */
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     transition: transform 0.3s ease;
-    text-align: center;
+    text-align: left;
     margin: 15px 0;
     box-sizing: border-box;
 }
@@ -48,10 +50,9 @@ h1 {
 /* === Slideshow Section === */
 .slideshow-container {
     position: relative;
-    width: 100%;
-    max-width: 600px;
+    width: 50%; /* Take half the width of the box */
     height: auto;
-    margin: 0 auto 20px auto;
+    margin-left: 20px; /* Space between text and slideshow */
     overflow: hidden;
     background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
     border-radius: 8px;
@@ -86,7 +87,12 @@ h1 {
     }
 }
 
-/* === Text Styling === */
+/* === Text Section === */
+.text-container {
+    width: 45%; /* Text takes up the remaining width */
+    padding: 10px;
+}
+
 h2 {
     font-size: 1.2rem;
     margin-top: 10px;
