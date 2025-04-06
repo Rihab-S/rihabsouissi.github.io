@@ -1,25 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const slideShows = document.querySelectorAll('.slideshow-container');
+document.addEventListener('DOMContentLoaded', function () {
+  const image = document.querySelector('.slideshow-image');
 
-  slideShows.forEach(container => {
-    let index = 0;
-    const images = container.querySelectorAll('.slideshows-image');
-
-    // Initially hide all images
-    images.forEach(image => {
-      image.classList.remove('active');
-    });
-
-    // Make the first image visible
-    images[index].classList.add('active');
-    console.log('Active image: ', images[index]); // Log the active image
-
-    // Change the images every 1 second
-    setInterval(() => {
-      images[index].classList.remove('active');
-      index = (index + 1) % images.length; // Loop back to the first image when reaching the end
-      images[index].classList.add('active');
-      console.log('Active image: ', images[index]); // Log the active image
-    }, 1000); // Change image every 1 second
+  // Rotate the image when clicked
+  image.addEventListener('click', function () {
+    // Toggle between rotating or resetting the rotation
+    if (image.style.transform === 'rotateY(180deg)') {
+      image.style.transform = 'rotateY(0deg)';
+    } else {
+      image.style.transform = 'rotateY(180deg)';
+    }
   });
 });
