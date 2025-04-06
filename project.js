@@ -3,7 +3,7 @@
 
   slideShows.forEach(container => {
     let index = 0;
-    const images = container.querySelectorAll('.slideshow-image');
+    const images = container.querySelectorAll('.slideshow-container');
     images.forEach((img, i) => img.style.display = i === 0 ? 'block' : 'none');
 
     setInterval(() => {
