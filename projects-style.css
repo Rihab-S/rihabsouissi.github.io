@@ -12,7 +12,7 @@ body {
 h1 {
     color: #333;
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 24px; /* Smaller font size for heading */
 }
 
 .skills-container {
@@ -42,13 +42,13 @@ h1 {
 }
 
 .skill-box img {
-    width: 40px;
+    width: 40px; /* Slightly smaller icon */
     height: 40px;
     margin-bottom: 10px;
 }
 
 .skill-box p {
-    font-size: 12px;
+    font-size: 12px; /* Smaller font size for the paragraph */
     line-height: 1.4;
     color: #555;
 }
@@ -56,7 +56,6 @@ h1 {
 .skill-box:hover {
     transform: scale(1.05);
 }
-
 /* ==== Slideshow Section ==== */
 .slideshow-container {
     position: relative;
