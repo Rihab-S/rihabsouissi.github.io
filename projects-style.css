@@ -86,17 +86,6 @@ h1 {
     z-index: 1;
 }
 
-/* Optional extra animation keyframes if you want to animate something more */
-@keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: scale(1.02);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 .slideshow-image.active {
     animation: fadeInSlide 1s ease-in-out;
