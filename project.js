@@ -12,12 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Make the first image visible
     images[index].classList.add('active');
+    console.log('Active image: ', images[index]); // Log the active image
 
     // Change the images every 1 second
     setInterval(() => {
       images[index].classList.remove('active');
       index = (index + 1) % images.length; // Loop back to the first image when reaching the end
       images[index].classList.add('active');
+      console.log('Active image: ', images[index]); // Log the active image
     }, 1000); // Change image every 1 second
   });
 });
