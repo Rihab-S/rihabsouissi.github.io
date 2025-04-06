@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     const images = container.querySelectorAll('.slideshow-image');
 
-    // Make only the first image visible at start
-    images.forEach(img => img.classList.remove('active'));
+    // Initially hide all images
+    images.forEach(image => {
+      image.classList.remove('active');
+    });
+
+    // Make the first image visible
     images[index].classList.add('active');
 
+    // Change the images every 1 second
     setInterval(() => {
-      // Remove active class from current image
       images[index].classList.remove('active');
-
-      // Update index to next image
-      index = (index + 1) % images.length;
-
-      // Add active class to new image
+      index = (index + 1) % images.length; // Loop back to the first image when reaching the end
       images[index].classList.add('active');
-    }, 3000); // Change image every 3 seconds for smoother experience
+    }, 1000); // Change image every 1 second
   });
 });
