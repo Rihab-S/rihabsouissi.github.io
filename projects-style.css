@@ -69,7 +69,27 @@ h1 {
     border-radius: 8px;
     z-index: 0;
 }
+/* 3D Image Container */
+.3d-image-container {
+    perspective: 1000px; /* Defines the distance from the viewer to create the 3D effect */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px 0;
+}
 
+/* Image Styling */
+.slideshow-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease; /* Smooth transition for rotation */
+    border-radius: 8px;
+}
+
+/* Rotate on Hover */
+.3d-image-container:hover .slideshow-image {
+    transform: rotateY(180deg); /* Rotate the image horizontally */
+}
 .slideshow-image.active {
     opacity: 1;
     z-index: 1;
