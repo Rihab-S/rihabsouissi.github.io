@@ -1,4 +1,4 @@
-/* === General Page Styling === */
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -16,66 +16,31 @@ h1 {
     font-size: 24px;
 }
 
-/* === Container and Project Box === */
+/* Container for Skill Box */
 .skills-container {
     display: flex;
-    flex-direction: row; /* Align items horizontally (text on left, slideshow on right) */
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 20px;
-    margin-top: 20px;
+    padding: 20px;
 }
 
+/* Skill Box Styling */
 .skill-box {
+    display: flex;
+    justify-content: space-between;
     background: white;
     padding: 20px;
-    width: 60%;
-    display: flex;
-    flex-direction: row; /* Align text and slideshow horizontally */
-    justify-content: flex-start;
-    align-items: center;
+    width: 80%; /* Adjust the width as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    transition: transform 0.3s ease;
-    text-align: left;
     margin: 15px 0;
     box-sizing: border-box;
 }
 
-.skill-box:hover {
-    transform: scale(1.05);
-}
-
-/* === Slideshow Section === */
-.slideshow-container {
-    position: relative;
-    width: 50%; /* Take half the width of the box */
-    height: auto;
-    margin-left: 20px; /* Space between text and slideshow */
-    overflow: hidden;
-    background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-    border-radius: 8px;
-}
-
-.slideshows-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    border-radius: 8px;
-    z-index: 0;
-}
 /* 3D Image Container */
 .3d-image-container {
     perspective: 1000px; /* Defines the distance from the viewer to create the 3D effect */
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px 0;
+    width: 40%; /* Adjust the width of the image container */
+    margin-right: 20px; /* Spacing between the image and text */
 }
 
 /* Image Styling */
@@ -90,40 +55,16 @@ h1 {
 .3d-image-container:hover .slideshow-image {
     transform: rotateY(180deg); /* Rotate the image horizontally */
 }
-.slideshow-image.active {
-    opacity: 1;
-    z-index: 1;
-    animation: fadeInSlide 1s ease-in-out;
-}
 
-@keyframes fadeInSlide {
-    0% {
-        opacity: 0;
-        transform: scale(1.02);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* === Text Section === */
+/* Text Styling */
 .text-container {
-    width: 45%; /* Text takes up the remaining width */
-    padding: 10px;
+    width: 55%; /* Adjust the width of the text container */
 }
 
 h2 {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #222;
-}
-
-.skill-box p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #555;
-    margin: 10px 0;
 }
 
 .date {
@@ -134,7 +75,7 @@ h2 {
     color: #333;
 }
 
-/* === Footer === */
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 20px;
