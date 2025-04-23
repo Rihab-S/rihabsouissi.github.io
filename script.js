@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("animated-text");
     const phrases = [
         "I'm Rihab Souissi",
-        "I'm a Doctor",
+        "I'm a Dr.-Ing",
         "I'm a Machine Learning Researcher and developer",
         "I'm a Python Developer",
         "I'm a C++ Developer",
