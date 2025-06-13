@@ -16,7 +16,7 @@ h1 {
   font-size: 24px;
 }
 
-.skill-box {
+/* .skill-box {
   background: white;
   padding: 20px;
   width: 80%;
@@ -30,6 +30,23 @@ h1 {
   transition: transform 0.3s;
   text-align: center;
   margin: 15px 0;
+  box-sizing: border-box;
+}
+ */
+.skill-box {
+  background: white;
+  padding: 20px;
+  width: 360px; /* Fixed width for consistency */
+  height: 280px; /* Fixed height to unify box sizes */
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s;
+  text-align: center;
+  margin: 15px;
   box-sizing: border-box;
 }
 
