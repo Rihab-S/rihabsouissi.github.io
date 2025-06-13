@@ -57,8 +57,13 @@ h1 {
   flex-wrap: wrap;
 }
 
-.text-container {
+/* .text-container {
   width: 55%; /* Adjust the width of the text container */
+} */
+.text-container {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h2 {
