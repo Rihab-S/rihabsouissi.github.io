@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/monogramme-rs.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <script src="language.js" defer></script>
+  <script src="portrait.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenu">Skip to content</a>
@@ -36,8 +37,17 @@
         </div>
       </div>
       <figure class="portrait">
-        <img src="assets/profile.jpg" width="322" height="340" alt="Portrait of Rihab Souissi">
+        <button class="portrait-flip" type="button" aria-label="Show the CV QR code" aria-pressed="false" disabled>
+          <span class="portrait-card">
+            <img class="portrait-front" src="assets/profile.jpg" width="322" height="340" alt="Portrait of Rihab Souissi">
+            <span class="portrait-back" aria-hidden="true">
+              <img src="assets/qr-cv.png" width="410" height="410" alt="">
+              <span>Scan the QR code to open my CV</span>
+            </span>
+          </span>
+        </button>
         <figcaption><span>Rihab Souissi</span><span>Applied Research · AI</span></figcaption>
+        <p class="portrait-hint">Click the photo to see my CV</p>
       </figure>
     </section>
     <dl class="wrap metrics" aria-label="Research results at HTWK Leipzig">

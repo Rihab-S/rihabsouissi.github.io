@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/monogramme-rs.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <script src="language.js" defer></script>
+  <script src="portrait.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
@@ -36,8 +37,17 @@
         </div>
       </div>
       <figure class="portrait">
-        <img src="assets/profile.jpg" width="322" height="340" alt="Portrait de Rihab Souissi">
+        <button class="portrait-flip" type="button" aria-label="Afficher le QR code du CV" aria-pressed="false" disabled>
+          <span class="portrait-card">
+            <img class="portrait-front" src="assets/profile.jpg" width="322" height="340" alt="Portrait de Rihab Souissi">
+            <span class="portrait-back" aria-hidden="true">
+              <img src="assets/qr-cv.png" width="410" height="410" alt="">
+              <span>Scanne le QR code pour ouvrir mon CV</span>
+            </span>
+          </span>
+        </button>
         <figcaption><span>Rihab Souissi</span><span>Recherche appliquée · IA</span></figcaption>
+        <p class="portrait-hint">Clique sur la photo pour voir mon CV</p>
       </figure>
     </section>
     <dl class="wrap metrics" aria-label="Résultats de recherche au HTWK Leipzig">
