@@ -99,9 +99,6 @@ h1 span, .role em { color: var(--accent); }
 .contact .primary { background: #6955d7; }
 .foot { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.3rem; font-size: .85rem; color: var(--muted); }
 @media (max-width: 760px) {
-  [id] { scroll-margin-top: 8rem; }
-  .top-inner { flex-wrap: wrap; padding-block: .6rem; }
-  .top nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: .25rem .55rem; }
   .hero { gap: 2rem; grid-template-columns: 1fr; }
   .portrait { justify-self: start; width: min(82%, 350px); }
   .section-head { align-items: start; flex-direction: column; }
@@ -113,4 +110,35 @@ h1 span, .role em { color: var(--accent); }
   .metrics { padding-block: .5rem; }
   .metrics div { padding: .75rem 1.05rem; }
   .metrics div + div { border-left: 0; border-top: 1px solid #555479; }
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.top a.language-switch {
+  padding: .4rem .7rem;
+  border: 1px solid #dcd5fb;
+  border-radius: 2rem;
+  background: #efebff;
+  color: var(--accent);
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+.top a.language-switch:hover {
+  background: #e4ddfc;
+}
+
+@media (max-width: 860px) {
+  .top-inner { flex-wrap: wrap; padding-block: .6rem; }
+  .top nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: .25rem .55rem; }
+  [id] { scroll-margin-top: 8rem; }
+}
+
+@media (max-width: 380px) {
+  .brand-logo { width: 8rem; }
 }

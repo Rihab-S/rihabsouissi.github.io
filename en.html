@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Rihab Souissi, AI R&amp;D engineer with a PhD, based in Lille, France. Applied research, indoor positioning, and Python development.">
+  <title>Rihab Souissi · AI R&amp;D Engineer</title>
+  <link rel="icon" href="assets/monogramme-rs.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="language.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenu">Skip to content</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#accueil"><img class="brand-logo" src="assets/logo-rihab-souissi.svg" width="480" height="112" alt="RS · Rihab Souissi"></a>
+      <nav aria-label="Main navigation">
+        <a href="#projets">Projects</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#competences">Skills</a>
+      </nav>
+      <div class="top-actions">
+        <a class="top-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        <a class="language-switch" href="index.html" hreflang="fr" aria-label="View the portfolio in French"><span aria-hidden="true">EN / FR</span></a>
+      </div>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="wrap hero" id="accueil" aria-labelledby="titre">
+      <div class="hero-copy">
+        <p class="eyebrow location">Lille, France <span>·</span> Available immediately</p>
+        <h1 id="titre">Rihab<br>Souissi<span>.</span></h1>
+        <p class="role">R&amp;D Engineer in <em>Artificial Intelligence</em></p>
+        <p class="intro">I hold a PhD in Information and Communication Science and Technology. I develop and evaluate machine learning and deep learning models using sensor data, with a focus on real-time positioning.</p>
+        <div class="actions">
+          <a class="button primary" href="#projets">Explore my projects <span aria-hidden="true">↘</span></a>
+          <a class="button secondary" href="assets/cv_Rihab_Souissi.pdf" download>Download CV (in French) <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="assets/profile.jpg" width="322" height="340" alt="Portrait of Rihab Souissi">
+        <figcaption><span>Rihab Souissi</span><span>Applied Research · AI</span></figcaption>
+      </figure>
+    </section>
+    <dl class="wrap metrics" aria-label="Research results at HTWK Leipzig">
+      <div><dt>0.24 m</dt><dd>Positioning error after optimization, down from 2.5 m</dd></div>
+      <div><dt>−3 m</dt><dd>Reduction in positioning error using a model trained on radio signal strength (RSSI)</dd></div>
+      <div><dt>89.11%</dt><dd>Reported accuracy for modeling the RSSI distribution</dd></div>
+    </dl>
+    <section class="section wrap" id="projets">
+      <div class="section-head"><h2>Projects</h2><p>Application development and research on indoor positioning.</p></div>
+      <div class="project-grid">
+        <article class="card featured">
+          <div class="project-copy">
+            <p class="eyebrow">GxLens · 2026</p>
+            <h3>Electronic Batch Records</h3>
+            <p>An application for pharmaceutical manufacturing with role management and an approval workflow. Optical character recognition (OCR) pre-fills batch records so users can review and correct the extracted data.</p>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>OCR</li></ul>
+          </div>
+          <div class="workflow" aria-label="Application approval workflow"><span>Master</span><span>QC</span><span>QA</span><span>Responsible pharmacist</span></div>
+        </article>
+        <article class="card">
+          <p class="eyebrow">HTWK Leipzig</p>
+          <h3>Real-Time Positioning</h3>
+          <p>Models trained on radio signal strength (RSSI), with a Streamlit interface to display live positions and 2D trajectories.</p>
+          <ul class="tags"><li>Machine learning</li><li>Python</li><li>Streamlit</li></ul>
+        </article>
+        <article class="card">
+          <p class="eyebrow">HTWK Leipzig</p>
+          <h3>Sensor Fusion for Positioning</h3>
+          <p>Compared deep learning models that use radio signals and data from a nine-axis sensor, measuring positioning error and response time.</p>
+          <ul class="tags"><li>Deep learning</li><li>RSSI</li><li>ICM-20948</li></ul>
+        </article>
+        <article class="card">
+          <p class="eyebrow">HTWK Leipzig</p>
+          <h3>Sensor Network Simulation</h3>
+          <p>Integrated an RSSI distribution model into an OMNeT++ simulation and compared network architectures by coverage, energy use, and positioning error.</p>
+          <ul class="tags"><li>OMNeT++</li><li>C++</li><li>NED</li></ul>
+          <details class="gallery">
+            <summary>View project images</summary>
+            <div class="gallery-grid">
+              <a href="assets/localization-1.png"><img src="assets/localization-1.png" alt="Positioning simulation, view 1" loading="lazy"></a>
+              <a href="assets/localization2.png"><img src="assets/localization2.png" alt="Positioning simulation, view 2" loading="lazy"></a>
+              <a href="assets/Localization3.png"><img src="assets/Localization3.png" alt="Positioning simulation, view 3" loading="lazy"></a>
+            </div>
+          </details>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Computer Vision</p>
+          <h3>Animal Detection</h3>
+          <p>Trained a YOLOv8 model on a custom dataset to detect animals in images and draw bounding boxes around them.</p>
+          <ul class="tags"><li>YOLOv8</li><li>Python</li><li>Hugging Face</li></ul>
+        </article>
+      </div>
+    </section>
+    <section class="section wrap" id="experience">
+      <div class="section-head"><h2>Experience</h2><p>Work experience and education.</p></div>
+      <div class="career">
+        <div class="timeline">
+          <article>
+            <p class="eyebrow">Sep–Nov 2026 · Lille</p><h3>Freelance Software Developer</h3><p class="org">GxLens</p>
+            <p>Designed the application architecture, built the backend and user interfaces, and integrated OCR. Implemented an audit trail, electronic signature controls, SHA-256 integrity checks, and a production analytics section.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Oct 2021–Nov 2024 · Germany</p><h3>Research Assistant and PhD Candidate</h3><p class="org">HTWK Leipzig</p>
+            <p>Collected sensor data, developed models, and evaluated low-power components. Supervised student projects and presented research findings at international conferences.</p>
+          </article>
+          <article>
+            <p class="eyebrow">Jun–Jul 2016 · Sfax</p><h3>Telecom Fault Management Intern</h3><p class="org">Tunisie Telecom</p>
+            <p>Wrote fault reports and helped restore telephone service.</p>
+          </article>
+        </div>
+        <aside class="card education" aria-labelledby="formation">
+          <h3 id="formation">Education</h3>
+          <dl>
+            <div><dt>PhD in Information and Communication Science and Technology, specializing in electronics</dt><dd>ENET’Com Sfax and HTWK Leipzig · 2019–2024</dd></div>
+            <div><dt>Research Master’s in Information Science and Technology, specializing in electronics</dt><dd>ENET’Com Sfax · 2017–2019</dd></div>
+            <div><dt>Bachelor’s Degree in Telecommunications</dt><dd>ENET’Com Sfax · 2017</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="section wrap" id="publications">
+      <div class="section-head"><h2>Publications</h2><div class="text-links"><a href="https://scholar.google.com/citations?hl=en&amp;user=2qZDT9UAAAAJ">Google Scholar ↗</a><a href="https://www.researchgate.net/profile/Rihab-Souissi">ResearchGate ↗</a></div></div>
+      <ul class="publications">
+        <li><span>2026 · IEEE SSD</span><strong lang="en">Investigation of Packet and RSSI Behavior for Multi-Target Indoor Localization</strong></li>
+        <li><span>2026 · Electronics</span><strong lang="en">AI-Based Indoor Localization Using Virtual Anchors in Combination with Wake-Up Receiver Nodes</strong></li>
+        <li><span>2025 · IEEE STA</span><strong lang="en">Analysis of a Multi-Target Indoor Localization System Based on Real Data Measurements</strong></li>
+        <li><span>2025 · IEEE SSD</span><a lang="en" href="https://ieeexplore.ieee.org/document/10989823">Improved Multi-Output AI for Indoor Localization Application Based on Real Data Measurements <span aria-hidden="true">↗</span></a></li>
+        <li><span>2025 · Sensors</span><a lang="en" href="https://www.mdpi.com/1424-8220/25/2/475">Enhancing Localization Accuracy and Reducing Processing Time in Indoor Positioning Systems: A Comparative Analysis of AI Models <span aria-hidden="true">↗</span></a></li>
+        <li><span>2024 · IEEE MI-STA</span><a lang="en" href="https://ieeexplore.ieee.org/document/10599696/">Analysis of Different Architectures for RSSI Based Indoor Localization using Trilateration Technique <span aria-hidden="true">↗</span></a></li>
+        <li><span>2024 · IEEE SSD</span><a lang="en" href="https://ieeexplore.ieee.org/document/10548383">Improved RSSI Distribution for Indoor Localization Application based on Real Data Measurements <span aria-hidden="true">↗</span></a></li>
+        <li><span>2024 · Sensors</span><a lang="en" href="https://www.mdpi.com/1424-8220/24/3/802">A Self-Localization Algorithm for Mobile Targets in Indoor Wireless Sensor Networks Using Wake-Up Media Access Control Protocol <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </section>
+    <section class="section wrap" id="competences">
+      <div class="section-head"><h2>Skills</h2></div>
+      <div class="project-grid">
+        <article class="card"><h3>Data and AI</h3><p>Data analysis and preprocessing, model evaluation and optimization, computer vision, and natural language processing.</p><ul class="tags"><li>pandas</li><li>scikit-learn</li><li>Keras</li><li>OpenCV</li><li>Hugging Face</li></ul></article>
+        <article class="card"><h3>Web Development and Databases</h3><p>Development of REST APIs, web interfaces, and data visualization tools.</p><ul class="tags"><li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Jinja2</li><li>HTML / CSS / JavaScript</li></ul></article>
+        <article class="card"><h3>Document Processing and Software Quality</h3><p>OCR, PDF data extraction, report generation and Excel exports, software testing, and IQ/OQ/PQ validation documentation.</p><ul class="tags"><li>PyMuPDF</li><li>ReportLab</li><li>openpyxl</li><li>unittest</li></ul></article>
+        <article class="card"><h3>Simulation and Embedded Systems</h3><p>Sensor data acquisition, network simulation, and embedded communication.</p><ul class="tags"><li>C / C++</li><li>OMNeT++</li><li>ESP32</li><li>MSP430</li><li>UART / SPI / I²C</li></ul></article>
+      </div>
+      <div class="extras">
+        <div><h3>Languages</h3><p>French (C1) · English (C1) · Arabic (native)</p></div>
+        <div id="certifications"><h3>DataCamp Certifications</h3><ul class="cert-list" lang="en">
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/1a350be57bbb951ef18f9359d0cd5aef3124b31a?raw=1">Introduction to Python ↗</a></li>
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/d41356ed1631b7b2b944ce20fd36b3a17cd3914b?raw=1">Intermediate Python ↗</a></li>
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/d1a15a5ce14cda49409dc6b6a6a2c2ca5ef23e3c?raw=1">Data Manipulation with pandas ↗</a></li>
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/5afae9081d0c588ee646c698175852e628109879?raw=1">Introduction to Statistics in Python ↗</a></li>
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/5b25a173a567ae15c25d0dede9f01d45037a9b7f?raw=1">Joining Data with pandas ↗</a></li>
+          <li><a href="https://www.datacamp.com/statement-of-accomplishment/course/2398ee2753d3c82e21be38ceda9eec00bd431421?raw=1">Introduction to Alteryx ↗</a></li>
+        </ul></div>
+      </div>
+    </section>
+    <section class="wrap contact" id="contact">
+      <div><h2>Contact</h2><p>Based in Lille and available for AI R&amp;D engineering roles.</p></div>
+      <div class="contact-links">
+        <a class="button primary" href="mailto:souissirihab900@gmail.com">Email me ↗</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/rihab-souissi17-05-/">LinkedIn ↗</a>
+        <a class="button secondary" href="https://github.com/Rihab-S">GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap foot"><span>Rihab Souissi</span><a href="#accueil">Back to top ↑</a></footer>
+</body>
+</html>
