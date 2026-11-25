@@ -6,9 +6,9 @@
   <meta name="description" content="Portfolio de Rihab Souissi, docteure et ingénieure R&D en intelligence artificielle à Lille. Recherche appliquée, localisation intérieure et développement Python.">
   <title>Rihab Souissi · Ingénieure R&D en IA</title>
   <link rel="icon" href="assets/monogramme-rs.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=portrait-card">
   <script src="language.js" defer></script>
-  <script src="portrait.js" defer></script>
+  <script src="portrait.js?v=portrait-card" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
@@ -36,19 +36,21 @@
           <a class="button secondary" href="assets/cv_Rihab_Souissi.pdf" download>Télécharger le CV <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <figure class="portrait">
-        <button class="portrait-flip" type="button" aria-label="Afficher le QR code du CV" aria-pressed="false" disabled>
-          <span class="portrait-card">
-            <img class="portrait-front" src="assets/profile.jpg" width="322" height="340" alt="Portrait de Rihab Souissi">
-            <span class="portrait-back" aria-hidden="true">
+      <div class="portrait">
+        <button class="portrait-flip" type="button" aria-label="Retourner la carte du portrait pour afficher le QR code du CV" aria-pressed="false" disabled>
+          <span class="portrait-card" aria-hidden="true">
+            <span class="portrait-front">
+              <img src="assets/profile.jpg" width="322" height="340" alt="">
+              <span class="portrait-caption"><strong>Rihab Souissi</strong><span>Recherche appliquée · IA</span></span>
+              <span class="portrait-hint">Clique sur la carte pour voir mon CV</span>
+            </span>
+            <span class="portrait-back" hidden>
               <img src="assets/qr-cv.png" width="410" height="410" alt="">
               <span>Scanne le QR code pour ouvrir mon CV</span>
             </span>
           </span>
         </button>
-        <figcaption><span>Rihab Souissi</span><span>Recherche appliquée · IA</span></figcaption>
-        <p class="portrait-hint">Clique sur la photo pour voir mon CV</p>
-      </figure>
+      </div>
     </section>
     <dl class="wrap metrics" aria-label="Résultats de recherche au HTWK Leipzig">
       <div><dt>0,24 m</dt><dd>Erreur de localisation après optimisation, contre 2,5 m initialement</dd></div>

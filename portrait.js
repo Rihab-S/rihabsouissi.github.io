@@ -6,3 +6,4 @@ portraitButton.addEventListener('click', () => {
 });
 
 portraitButton.disabled = false;
+portraitButton.querySelector('.portrait-back').hidden = false;
