@@ -120,13 +120,14 @@ h1 span, .role em { color: var(--accent); }
 }
 
 .top a.language-switch {
-  padding: .4rem .7rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid #dcd5fb;
-  border-radius: 2rem;
+  border-radius: 50%;
   background: #efebff;
   color: var(--accent);
-  font-size: .85rem;
-  white-space: nowrap;
 }
 
 .top a.language-switch:hover {
